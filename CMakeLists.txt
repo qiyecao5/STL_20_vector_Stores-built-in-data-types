@@ -9,8 +9,11 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)  
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)  
 
-# 源文件添加到SRC_LIST变量
-aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
+set(SRC_LISTS  
+    # ${PROJECT_SOURCE_DIR}/src/main.cpp  
+    ${PROJECT_SOURCE_DIR}/src/2_vector存放自定义数据类.cpp
+    # ... 其他源文件 ...  
+)
 
 # 生成外面的可执行文件
-add_executable(${PROJECT_NAME} ${SRC_LIST})
+add_executable(${PROJECT_NAME} ${SRC_LISTS})
